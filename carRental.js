@@ -169,13 +169,14 @@ var carA = new Car(carInfo);
 
 var vendor = new Vendor('Jens Limited');
 vendor.addCustomer(customerA);
-
-
 vendor.addCar(carA);
 
-vendor.rentCar(customerA.id, 5);
+
 console.log(vendor.availableCars());
+
 vendor.rentCar(customerA.id, 5);
-console.log(vendor.availableCars());
+vendor.rentCar(customerA.id, 5);
 vendor.returnCar(customerA.id);
+
+console.log(vendor.availableCars());
 vendor.totalRevenue();
